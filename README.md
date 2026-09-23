@@ -47,6 +47,3 @@ python3 cors_check.py -f urls.txt -o report.json
 | HIGH | `null` / weak validation with credentials |
 | MEDIUM | Reflection without credentials, insecure scheme |
 | LOW | Wildcard on public resources |
-
-## License
-MIT
