@@ -26,23 +26,23 @@ pip install requests
 
 ## Usage
 
-# Single URL
+### Single URL
 ```bash
 python3 cors_check.py https://example.com/api/user
 ```
 
-# Authenticated endpoint, since CORS issues matter most where cookies or tokens are involved
+### Authenticated endpoint, since CORS issues matter most where cookies or tokens are involved
 ```bash
 python3 cors_check.py https://example.com/api/me --cookie "session=abc123"
 python3 cors_check.py https://example.com/api/me -H "Authorization: Bearer TOKEN"
 ```
 
-# Many URLs, saving a JSON report
+### Many URLs, saving a JSON report
 ```bash
 python3 cors_check.py -f urls.txt -o report.json
 ```
 
-# Self-signed certificate
+### Self-signed certificate
 ```bash
 python3 cors_check.py https://staging.local/api -k
 ```
