@@ -21,14 +21,30 @@ Cross-Origin Resource Sharing (CORS) configurations.
 ```bash
 git clone https://github.com/RodneyRoger5/cors-misconfig-scanner.git
 cd cors-misconfig-scanner
-pip install -r requirements.txt
+pip install requests
 ```
 
 ## Usage
+
+# Single URL
 ```bash
 python3 cors_check.py https://example.com/api/user
-python3 cors_check.py https://example.com/api/me --cookie "session=abc"
+```
+
+# Authenticated endpoint, since CORS issues matter most where cookies or tokens are involved
+```bash
+python3 cors_check.py https://example.com/api/me --cookie "session=abc123"
+python3 cors_check.py https://example.com/api/me -H "Authorization: Bearer TOKEN"
+```
+
+# Many URLs, saving a JSON report
+```bash
 python3 cors_check.py -f urls.txt -o report.json
+```
+
+# Self-signed certificate
+```bash
+python3 cors_check.py https://staging.local/api -k
 ```
 
 | Option | Description |
