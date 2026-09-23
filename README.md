@@ -19,7 +19,7 @@ Cross-Origin Resource Sharing (CORS) configurations.
 
 ## Installation
 ```bash
-git clone https://github.com/<your-username>/cors-misconfig-scanner.git
+git clone https://github.com/RodneyRoger5/cors-misconfig-scanner.git
 cd cors-misconfig-scanner
 pip install -r requirements.txt
 ```
